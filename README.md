@@ -12,3 +12,6 @@ Basic Appscript code to run in extension with a properly formatted Google Sheet 
 ## Usage
 - Open the same document
 - Click "Chart" -> "SankeyDiagram"
+
+## Example
+- [Example Spreadshee] (https://docs.google.com/spreadsheets/d/15LfMwus7_YkWtqcqyOYpRFRTiYRzD1moL3HkJBBSenQ/edit#gid=0)
