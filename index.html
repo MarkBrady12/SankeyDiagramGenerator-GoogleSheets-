@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <base target="_top">
+      <script src="https://www.google.com/jsapi"></script>
+   </head>
+   <body>
+      <div id="main"></div>
+      <script type="text/javascript">
+         google.load('visualization', '1', {
+           packages: ['corechart', 'sankey']
+         });      google.setOnLoadCallback(initialize);
+           
+           function initialize() {
+            google.script.run.withSuccessHandler(drawChart).getSpreadsheetData();
+           }
+           
+           function drawChart(rows) {
+             console.log(rows);
+             var data = google.visualization.arrayToDataTable(rows);
+             var chart = new google.visualization.Sankey(document.getElementById('main'));
+             chart.draw(data, {width: 900, sankey: {iterations: 64}});
+           }
+      </script>
+   </body>
+</html>
